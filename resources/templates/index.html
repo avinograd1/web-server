@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Лабораторные работы</title>
+	<link href="static/css/styles.css" rel="stylesheet">
+	
+	<script src="static/js/utils.js"></script>
+	<script src="static/js/script.js"></script>
+</head>
+<body>
+	<div class="sidebar">
+		<div class="photo">
+			<img src="static/images/avatar.png">
+		</div>
+		<button class="lab active">Лабораторная работа №1</button>
+		<button class="lab">Лабораторная работа №2</button>
+		<button class="lab">Лабораторная работа №3</button>
+	</div>
+
+	<div class="main">
+		<div class="header">
+			<div class="back">&lt;</div>
+			<div class="student-name">Вийтович Арсений</div>
+			<div class="lab-title"></div>
+		</div>
+		<div class="content">
+			<div id="content-lab-1">
+
+			</div>
+
+			<div id="content-lab-2">
+				<div class="container-part top">
+					<div class="inner">
+						<h3>Сортировка чисел по возрастанию</h3>
+						<label>Список элементов</label>
+						<input class="text-input" type="text" placeholder="1, 2, 3..., n" id="numbers-list">
+						<label>Результат</label>
+						<input class="text-input" type="text" readonly id="sort-numbers-result">
+						<button id="sort-numbers-button">Отсортировать</button>
+					</div>
+				</div>
+
+				<div class="container-part bottom">
+					<div class="inner">
+						<h3>Сортировка слов по алфавиту</h3>
+						<label>Список слов</label>
+						<input class="text-input" type="text" placeholder="арбуз, банан, ..." id="words-list">
+						<label>Результат</label>
+						<input class="text-input" type="text" readonly id="sort-words-result">
+						<button id="sort-words-button">Отсортировать</button>
+					</div>
+				</div>
+			</div>
+
+			<div id="content-lab-3">
+				<div class="lab3-header">
+					<button class="lab3-tab active">Раздел 1</button>
+					<button class="lab3-tab">Раздел 2</button>
+					<button class="lab3-tab">Раздел 3</button>
+					<button class="lab3-tab">Раздел 4</button>
+					<button class="lab3-tab">Раздел 5</button>
+				</div>
+
+				<div class="lab3-content">
+					<div id="lab3-tab-1">
+						<button id="change-tabs-colors">Поменять цвета разделов</button>
+					</div>
+					<div id="lab3-tab-2">
+						<img class="small-image" src="static/images/picture-1.png">
+						<img class="small-image" src="static/images/picture-2.png">
+						<img class="small-image" src="static/images/picture-3.png">
+					</div>
+					<div id="lab3-tab-3">
+						<div class="long-text">
+							<p>
+								Равным образом начало повседневной работы по формированию позиции играет важную роль в формировании новых предложений. Товарищи! реализация намеченных плановых заданий требуют определения и уточнения дальнейших направлений развития. Товарищи! начало повседневной работы по формированию позиции в значительной степени обуславливает создание новых предложений. Повседневная практика показывает, что реализация намеченных плановых заданий позволяет выполнять важные задания по разработке соответствующий условий активизации. Идейные соображения высшего порядка, а также укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.
+							</p>
+						</div>
+						<button id="toggle-text-btn">Показать больше</button>
+					</div>
+					<div id="lab3-tab-4">
+						<p id="counter">
+							0
+						</p>
+						<button id="counter-click">+</button>
+					</div>
+					<div id="lab3-tab-5">
+						<div id="products-list"></div>
+						<p>Итого: <span id="total-sum">0</span> ₽</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

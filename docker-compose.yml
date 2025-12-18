@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  server:
+    container_name: server-native-php
+    image: nginx:latest
+    volumes:
+      - ./docker-data/server/nginx/conf.d:/etc/nginx/conf.d
+      - .:/var/www/html
+    ports:
+      - "127.0.0.1:80:80"
+    depends_on:
+      - translator
+  translator:
+    container_name: translator-native-php
+    build:
+      context: .
+      dockerfile: ./docker-data/images/translator/Dockerfile
+    working_dir: '/var/www/html'
+    volumes:
+      - ./docker-data/php/conf.d/php.ini:/usr/local/etc/php/conf.d/php.ini
+      - .:/var/www/html
+    environment:
+      PHP_IDE_CONFIG: "serverName=Docker"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
